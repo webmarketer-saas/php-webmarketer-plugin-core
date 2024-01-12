@@ -125,7 +125,10 @@ class EventPayloadBuilder
     public static function ensureType($value, $type, $subtype = null)
     {
         if ($type == 'string') {
-            if (is_int($value) || is_float($value)) {
+            if (is_int($value)) {
+                return number_format($value);
+            }
+            if (is_float($value)) {
                 return number_format($value, 2, '.', '');
             }
             if (is_array($value)) {
