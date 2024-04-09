@@ -56,7 +56,9 @@ class EventPayloadBuilder
                 $formatted_value = self::buildCompositeBasedPayload($mappable, $field_mapping, $context, $destination_field->type);
             }
 
-            $output[$field_mapping->getWebmarketerKey()] = $formatted_value;
+            if (!is_null($formatted_value)) {
+                $output[$field_mapping->getWebmarketerKey()] = $formatted_value;
+            }
         }
 
         return $output;
