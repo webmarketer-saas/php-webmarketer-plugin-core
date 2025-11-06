@@ -1,4 +1,3 @@
-*.lock
 /vendor
 .idea
 .php-cs-fixer.dist.php

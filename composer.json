@@ -3,8 +3,9 @@
   "type": "library",
   "license": "MIT",
   "require": {
-    "php": "^5.5 || ^7.0 || ^8.0",
-    "webmarketer/webmarketer-php": "^3.4"
+    "php": "^8.0",
+    "webmarketer/webmarketer-php": "^3.4",
+    "nyholm/psr7": "^1.8"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.7.27 || >= 6.5.14"
@@ -18,6 +19,11 @@
       "WebmarketerPluginCore\\Queue\\": "src/queue",
       "WebmarketerPluginCore\\Services\\": "src/services",
       "WebmarketerPluginCore\\Settings\\": "src/settings"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
     }
   }
 }
