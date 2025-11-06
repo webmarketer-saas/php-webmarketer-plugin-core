@@ -42,9 +42,12 @@ class EventType
         return array_map(function ($field) use ($project_fields) {
             $found = array_values(array_filter($project_fields, function ($project_field) use ($field) {
                 return $project_field->key == $field->storageKey;
-            }))[0];
+            }));
 
-            $field->label = $found->label;
+            if ($found && count($found) > 0) {
+                $field->label = $found[0]->label;
+            }
+
             return $field;
         }, $event_type_fields);
     }
