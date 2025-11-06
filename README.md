@@ -17,7 +17,7 @@ The official PHP Core bundle for Webmarketer plugins.
 
 ## Install
 To add this package, your project must meet several requirements :
-* PHP >= 5.6
+* PHP >= 8.1
 * Composer ([install composer](https://getcomposer.org))
 
 This package is the core used by all Webmarketer tiers integrations and plugins (WordPress, Prestashop). It provides interfaces and utilities for any plugin.  
